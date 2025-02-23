@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# [EnigmaV2](https://enigma-v2.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **EnigmaV2** is a secure web-based application that allows users to encrypt and decrypt messages using AES encryption. With an intuitive interface, users can easily enter text and a secret key to encrypt or decrypt their data, ensuring privacy and confidentiality.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Key Features:
+- **AES Encryption:** Provides secure encryption and decryption using AES with a customizable secret key (max 18 characters).
+- **Easy-to-Use Interface:** Enter text and key, and seamlessly encrypt or decrypt messages with a single click.
+- **Clear Text and Key:** Simple buttons to clear the input fields and reset the app for a fresh start.
+- **Quick Input:** Paste button for faster text input from clipboard.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛡️ Security Features
+- **AES-256 Encryption**: Military-grade encryption standard
+- **Client-Side Processing**: All encryption/decryption happens locally
+- **No Data Storage**: Messages are never stored or transmitted
+- **Key Security**: Encryption keys are never saved or logged
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Technical Overview:
+- **Frontend:** Built with React for a dynamic and responsive user experience.
+- **Encryption:** Uses AES encryption for secure data handling.
+- **UI Framework:** Styled with CSS for a clean, modern look and feel.
+- **Hosting:** Deployed on Vercel for quick and reliable hosting.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/LethaXl/EnigmaV2.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate into the repository directory:
+   ```bash
+   cd EnigmaV2
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install required dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+### Running Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Visit `http://localhost:3000` in your browser to view the app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔒 Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Enter Text**: 
+   - Input the message you want to encrypt or decrypt
+   - Use the "Paste" button to quickly insert text from your clipboard
+2. **Enter Key**: 
+   - Provide a secret key for encryption/decryption
+   - Maximum length: 18 characters
+3. **Choose Operation**:
+   - Click "Encrypt" to encrypt your message
+   - Click "Decrypt" to decrypt an encrypted message
+4. **Additional Actions**:
+   - Use "Clear" buttons to reset inputs
+   - Use "Paste" button to paste from clipboard
+   - Copy results with the "Copy" button
 
-## Learn More
+## ❗ Troubleshooting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Common Issues
+1. **"Invalid Key"**: Ensure you're using the exact key used for encryption
+2. **"Failed to Decrypt"**: Verify that the encrypted text wasn't modified
+3. **"Blank Result"**: Check if both input fields are filled
+4. **"Key Too Long"**: Ensure your encryption key is 18 characters or less
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deployment
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application is deployed on Vercel. You can:
+- Access the live version at: [https://enigma-v2.vercel.app/](https://enigma-v2.vercel.app/)
