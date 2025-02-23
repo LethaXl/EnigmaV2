@@ -1,3 +1,225 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b1b2f;
+  color: #e0e0e0;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #4a90e2, #78c4d4);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.formContainer {
+  background-color: #252537;
+  padding: 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 680px;
+  margin-bottom: 20px;
+}
+
+.formContainer textarea,
+.formContainer input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #3e3e54;
+  border-radius: 4px;
+  background-color: #2e2e4e;
+  color: #e0e0e0;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  resize: vertical;  /* allow vertical only */
+  min-height: 120px;  /* lock minimum height */
+}
+
+.formContainer textarea:focus,
+.formContainer input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.formContainer textarea::placeholder,
+.formContainer input::placeholder {
+  color: #888899;
+  font-weight: 300;
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 8px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.formContainer button:hover {
+  background-color: #357ab8;
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.6);
+}
+
+.outputContainer {
+  margin-top: 25px;
+  padding: 25px;
+  background-color: #2e2e4e;
+  border: 2px solid #4a90e2; 
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  max-width: 600px;   /* updated to match container */
+  text-align: center;
+  margin-left: auto;  /* center horizontally */
+  margin-right: auto;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  opacity: 1;
+}
+
+.outputContainer.fade-out {
+  opacity: 0;
+  height: 0; /* if desired, adjust as needed */
+  overflow: hidden;
+}
+
+.outputContainer textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #3e3e54;
+  border-radius: 4px;
+  background-color: #2e2e4e;
+  color: #e0e0e0;
+  font-size: 15px;
+  resize: vertical;  /* allow vertical only */
+  box-sizing: border-box;
+  min-height: 120px;  /* lock minimum height */
+}
+
+.outputContainer button {
+  width: auto;
+  padding: 8px 16px;
+  margin: 8px 4px 0;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outputContainer button:hover {
+  background-color: #357ab8;
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.6);
+}
+
+/* New output button container style */
+.outputButtons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.outputButtons button {
+  padding: 8px 16px;
+  margin: 8px 4px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outputButtons button:hover {
+  background-color: #357ab8;
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.6);
+}
+
+
+
+/* Add top margin for the button immediately following the key input */
+.formContainer .keyInput + button {
+  margin-top: 24px;
+}
+
+/* Consolidated Key Field Block */
+.keyWrapper {
+  position: relative;
+  width: 240px;             /* overall block width */
+  margin: 20px auto;        /* center & spacing */
+}
+
+.keyWrapper label {
+  display: block;
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+  /* Optional: text-transform: uppercase; */
+}
+
+/* Consolidated Key Field Block - Updated for Side-by-Side Icons */
+.keyWrapper .keyInput {
+  width: 220px;  /* reserve space for two icons */
+  padding: 2px 4px;
+  font-size: 18px;
+  line-height: 1.2;
+  border: 0.1px solid #3e3e54;  /* lowered border width */
+  border-radius: 4px;
+  background-color: #2e2e4e;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  height: 50px;             /* desired height */
+  min-height: unset;
+  font-family: 'Courier New', Courier, monospace;  /* use block/monospace font */
+}
+
+.keyWrapper .keyIcons {
+  position: absolute;
+  top: 50%;
+  right: -65px;             /* adjust as needed */
+  transform: translateY(-25%);
+  display: flex;
+  flex-direction: row;     /* side-by-side */
+  align-items: center;     /* vertical center */
+  gap: 15px;
+}
+
+.keyWrapper .keyInput::placeholder {
+  font-size: 15px;  /* reduced placeholder font size */
+  color: #888899;   /* optional: adjust color as needed */
+}
+
+.keyWrapper .material-symbols-outlined {
+  font-size: 30px;  /* adjust this value to change the key icon size */
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +258,386 @@
     transform: rotate(360deg);
   }
 }
+
+/* New main container style */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Custom scrollbar styling for textarea elements */
+.formContainer textarea::-webkit-scrollbar,
+.outputContainer textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.formContainer textarea::-webkit-scrollbar-track,
+.outputContainer textarea::-webkit-scrollbar-track {
+  background: #2e2e4e;
+  border-radius: 4px;
+}
+
+.formContainer textarea::-webkit-scrollbar-thumb,
+.outputContainer textarea::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 4px;
+  border: 2px solid #2e2e4e;
+}
+
+.formContainer textarea::-webkit-scrollbar-thumb:hover,
+.outputContainer textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #357ab8;
+}
+
+.formContainer textarea::-webkit-scrollbar-button,
+.outputContainer textarea::-webkit-scrollbar-button,
+.formContainer textarea::-webkit-scrollbar-corner,
+.outputContainer textarea::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
+/* New styling for Material Icons */
+.material-icons-sharp {
+  font-size: 30px;
+  color: #e3e3e3;
+}
+
+/* New class to rotate and flip the copy icon */
+.rotate-copy {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+/* New styles for grouping buttons in text and key sections */
+.textButtons,
+.keyButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.textButtons button,
+.keyButtons button {
+  width: auto;
+}
+
+/* New styles for icon-only buttons */
+.iconButton {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: transform 0.1s ease;
+}
+
+.iconButton:hover,
+.iconButton:focus,
+.iconButton:active {
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.iconButton:active {
+  transform: scale(0.75);
+}
+
+/* New styles for text area wrapper with icons */
+.textAreaWrapper {
+  position: relative;
+  padding-right: 40px; /* adjust as needed */
+}
+
+.textAreaWrapper textarea {
+  width: 100%;
+  /* ...existing textarea styles... */
+}
+
+.textAreaIcons {
+  position: absolute;
+  top: 50%;
+  right: -25px; /* adjust as needed */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.textAreaIcons button {
+  /* Remove extra button styling for icon-only buttons if needed */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* New styles for output text area wrapper with icons */
+.outputAreaWrapper {
+  position: relative;
+  padding-right: 40px;  /* Add some space for the icons */
+}
+
+.outputAreaWrapper textarea {
+  width: 100%;
+  /* ...existing textarea styles apply... */
+}
+
+.outputAreaIcons {
+  position: absolute;
+  top: 50%;
+  right: -8px; /* adjust as needed */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.outputAreaIcons button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.formContainer textarea,
+.formContainer input,
+.outputContainer textarea {
+  font-family: "Nunito Sans", serif;
+}
+
+/* Remove the old cool-button style then add the new style exactly as provided: */
+
+/* New container for action buttons */
+.actionButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* New Action Button Style */
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1670f0;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+.action-button:active {
+  transform: scale(0.95);
+}
+
+
+a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 15px 10px;
+  color: #1670f0;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  overflow: hidden;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Remove default animations */
+a span:nth-child(1),
+a span:nth-child(2),
+a span:nth-child(3),
+a span:nth-child(4) {
+  animation: none;
+}
+
+/* Add animations on active state only */
+a:active span:nth-child(1) {
+  animation: animate1 2s linear infinite;
+  animation-delay: 1s;
+}
+a:active span:nth-child(2) {
+  animation: animate2 2s linear infinite;
+  animation-delay: 2s;
+}
+a:active span:nth-child(3) {
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+a:active span:nth-child(4) {
+  animation: animate4 2s linear infinite;
+  animation-delay: 2s;
+}
+
+/* Disable animations on enc/dec button spans when not active */
+a span:nth-child(1):not(:active),
+a span:nth-child(2):not(:active),
+a span:nth-child(3):not(:active),
+a span:nth-child(4):not(:active) {
+  animation: none !important;
+}
+
+/* Enable animations on active state only */
+a:active span:nth-child(1) {
+  animation: animate1 2s linear infinite !important;
+  animation-delay: 1s;
+}
+a:active span:nth-child(2) {
+  animation: animate2 2s linear infinite !important;
+  animation-delay: 2s;
+}
+a:active span:nth-child(3) {
+  animation: animate3 2s linear infinite !important;
+  animation-delay: 1s;
+}
+a:active span:nth-child(4) {
+  animation: animate4 2s linear infinite !important;
+  animation-delay: 2s;
+}
+
+a span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #1779ff);
+  animation: animate1 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate1 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+a span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate2 {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+a span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #1779ff);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate3 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+a span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #1779ff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate4 {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+/* New container for the action buttons */
+.actionButtonsContainer {
+  position: relative;
+  height: 60px; /* reduced height */
+  margin-top: 5px; /* reduced top margin */
+}
+
+/* Updated overrides to further reduce the gap between buttons */
+.left-button {
+  left: 25% !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+.right-button {
+  right: 25% !important;
+  left: auto !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+
+/* Remove default animations from non-active state (if not already done) */
+a span:nth-child(1),
+a span:nth-child(2),
+a span:nth-child(3),
+a span:nth-child(4) {
+  animation: none !important;
+}
+
+/* New rules: when the button has ".animate-click" class, enable animations */
+a.animate-click span:nth-child(1) {
+  animation: animate1 2s linear infinite !important;
+  animation-delay: 1s;
+}
+a.animate-click span:nth-child(2) {
+  animation: animate2 2s linear infinite !important;
+  animation-delay: 2s;
+}
+a.animate-click span:nth-child(3) {
+  animation: animate3 2s linear infinite !important;
+  animation-delay: 1s;
+}
+a.animate-click span:nth-child(4) {
+  animation: animate4 2s linear infinite !important;
+  animation-delay: 2s;
+}
+
+/* For the right (Decrypt) button, reverse the animation direction on click */
+a.right-button.animate-click span:nth-child(1),
+a.right-button.animate-click span:nth-child(2),
+a.right-button.animate-click span:nth-child(3),
+a.right-button.animate-click span:nth-child(4) {
+  animation-direction: reverse !important;
+}
+
+/* Update Encrypt/Decrypt button font */
+.actionButtonsContainer a.button {
+  font-family: "DM Serif Text", serif;
+}
+
