@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import { encryptText, decryptText } from './crypto';
+// Added import for performance metrics
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
     const [text, setText] = useState('');
@@ -205,6 +207,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            <SpeedInsights />
         </div>
     );
 }
