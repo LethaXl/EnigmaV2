@@ -180,27 +180,26 @@
   }
 
   .keyWrapper .keyInput::placeholder {
-    font-size: 12px; /* Adjust this value as desired */
+    font-size: 12px;  
     width: 100%;
   }
 
   .keyWrapper  {
-    /* Adjust this value as desired */
     width: 70%;
   }
 
   .keyWrapper label {
-    font-size: 19px; /* Reduced from 21px */
+    font-size: 19px;  
   }
 
   .keyWrapper .material-symbols-outlined {
-    font-size: 28px; /* Reduced from 30px */
+    font-size: 28px;  
   }
 
-  /* Adjust icons for input text (paste/clear) on small devices */
+  
   .textAreaIcons {
-    right: -15px;  /* shift container closer */
-    gap: 4px;      /* adjust gap between icons */
+    right: -15px;   
+    gap: 4px;      
   }
   
 }
