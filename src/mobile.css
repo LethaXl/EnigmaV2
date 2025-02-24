@@ -162,7 +162,7 @@
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 396px) {
   h1 {
     font-size: 28px;
   }
@@ -171,12 +171,38 @@
   .outputContainer {
     width: 90%;
     padding: 10px 8px;
+    transform: translateX(12%);
   }
 
   .actionButtonsContainer a {
     font-size: 14px;
     padding: 10px 0;
   }
+
+  .keyWrapper .keyInput::placeholder {
+    font-size: 12px; /* Adjust this value as desired */
+    width: 100%;
+  }
+
+  .keyWrapper  {
+    /* Adjust this value as desired */
+    width: 70%;
+  }
+
+  .keyWrapper label {
+    font-size: 19px; /* Reduced from 21px */
+  }
+
+  .keyWrapper .material-symbols-outlined {
+    font-size: 28px; /* Reduced from 30px */
+  }
+
+  /* Adjust icons for input text (paste/clear) on small devices */
+  .textAreaIcons {
+    right: -15px;  /* shift container closer */
+    gap: 4px;      /* adjust gap between icons */
+  }
+  
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
