@@ -37,7 +37,7 @@ export async function decryptText(encryptedData, key) {
     const cryptoKey = await crypto.subtle.importKey("raw", encodedKey, "AES-GCM", false, ["decrypt"]);
     let iv, encrypted;
     
-    // Modified: allow extra colons in the ciphertext by taking the first part as iv and the rest as ciphertext
+    
     if (typeof encryptedData === 'string') {
         const parts = encryptedData.split(':');
         if (parts.length < 2) throw new Error("Invalid encrypted data format.");

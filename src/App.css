@@ -41,8 +41,8 @@ h1 {
   color: #e0e0e0;
   font-size: 15px;
   transition: border-color 0.3s ease;
-  resize: vertical;  /* allow vertical only */
-  min-height: 120px;  /* lock minimum height */
+  resize: vertical;  
+  min-height: 120px;  
 }
 
 .formContainer textarea:focus,
@@ -85,17 +85,18 @@ h1 {
   border: 2px solid #4a90e2; 
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  max-width: 600px;   /* updated to match container */
+  max-width: 600px;   
   text-align: center;
-  margin-left: auto;  /* center horizontally */
+  margin-left: auto;  
   margin-right: auto;
   transition: opacity 0.3s ease, height 0.3s ease;
   opacity: 1;
+  transform: translateX(-3%);  /* Keep original transform */
 }
 
 .outputContainer.fade-out {
   opacity: 0;
-  height: 0; /* if desired, adjust as needed */
+  height: 0;  
   overflow: hidden;
 }
 
@@ -108,9 +109,9 @@ h1 {
   background-color: #2e2e4e;
   color: #e0e0e0;
   font-size: 15px;
-  resize: vertical;  /* allow vertical only */
+  resize: vertical;   
   box-sizing: border-box;
-  min-height: 120px;  /* lock minimum height */
+  min-height: 120px;   
 }
 
 .outputContainer button {
@@ -134,7 +135,7 @@ h1 {
   box-shadow: 0 6px 16px rgba(74, 144, 226, 0.6);
 }
 
-/* New output button container style */
+ 
 .outputButtons {
   text-align: center;
   margin-top: 10px;
@@ -160,18 +161,16 @@ h1 {
   box-shadow: 0 6px 16px rgba(74, 144, 226, 0.6);
 }
 
-
-
-/* Add top margin for the button immediately following the key input */
+ 
 .formContainer .keyInput + button {
   margin-top: 24px;
 }
 
-/* Consolidated Key Field Block */
+ 
 .keyWrapper {
   position: relative;
-  width: 240px;             /* overall block width */
-  margin: 20px auto;        /* center & spacing */
+  width: 240px;             
+  margin: 20px auto;         
 }
 
 .keyWrapper label {
@@ -181,43 +180,43 @@ h1 {
   font-weight: 700;
   color: #e0e0e0;
   margin-bottom: 4px;
-  /* Optional: text-transform: uppercase; */
+   
 }
 
-/* Consolidated Key Field Block - Updated for Side-by-Side Icons */
+ 
 .keyWrapper .keyInput {
-  width: 220px;  /* reserve space for two icons */
+  width: 220px;   
   padding: 2px 4px;
   font-size: 18px;
   line-height: 1.2;
-  border: 0.1px solid #3e3e54;  /* lowered border width */
+  border: 0.1px solid #3e3e54; 
   border-radius: 4px;
   background-color: #2e2e4e;
   color: #e0e0e0;
   box-sizing: border-box;
-  height: 50px;             /* desired height */
+  height: 50px;              
   min-height: unset;
-  font-family: 'Courier New', Courier, monospace;  /* use block/monospace font */
+  font-family: 'Courier New', Courier, monospace;  
 }
 
 .keyWrapper .keyIcons {
   position: absolute;
   top: 50%;
-  right: -65px;             /* adjust as needed */
+  right: -65px;              
   transform: translateY(-25%);
   display: flex;
-  flex-direction: row;     /* side-by-side */
-  align-items: center;     /* vertical center */
+  flex-direction: row;     
+  align-items: center;      
   gap: 15px;
 }
 
 .keyWrapper .keyInput::placeholder {
-  font-size: 15px;  /* reduced placeholder font size */
-  color: #888899;   /* optional: adjust color as needed */
+  font-size: 15px;  
+  color: #888899;    
 }
 
 .keyWrapper .material-symbols-outlined {
-  font-size: 30px;  /* adjust this value to change the key icon size */
+  font-size: 30px;  
 }
 
 .App {
@@ -259,7 +258,7 @@ h1 {
   }
 }
 
-/* New main container style */
+ 
 .container {
   width: 100%;
   max-width: 800px;
@@ -267,7 +266,7 @@ h1 {
   padding: 20px;
 }
 
-/* Custom scrollbar styling for textarea elements */
+ 
 .formContainer textarea::-webkit-scrollbar,
 .outputContainer textarea::-webkit-scrollbar {
   width: 10px;
@@ -298,18 +297,18 @@ h1 {
   background: rgba(0,0,0,0);
 }
 
-/* New styling for Material Icons */
+ 
 .material-icons-sharp {
   font-size: 30px;
   color: #e3e3e3;
 }
 
-/* New class to rotate and flip the copy icon */
+ 
 .rotate-copy {
   transform: rotate(180deg) scaleX(-1);
 }
 
-/* New styles for grouping buttons in text and key sections */
+ 
 .textButtons,
 .keyButtons {
   display: flex;
@@ -323,7 +322,7 @@ h1 {
   width: auto;
 }
 
-/* New styles for icon-only buttons */
+ 
 .iconButton {
   background: none !important;
   border: none !important;
@@ -349,21 +348,21 @@ h1 {
   transform: scale(0.75);
 }
 
-/* New styles for text area wrapper with icons */
+ 
 .textAreaWrapper {
   position: relative;
-  padding-right: 40px; /* adjust as needed */
+  padding-right: 40px;  
 }
 
 .textAreaWrapper textarea {
   width: 100%;
-  /* ...existing textarea styles... */
+ 
 }
 
 .textAreaIcons {
   position: absolute;
   top: 50%;
-  right: -25px; /* adjust as needed */
+  right: -25px;  
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -371,7 +370,6 @@ h1 {
 }
 
 .textAreaIcons button {
-  /* Remove extra button styling for icon-only buttons if needed */
   background: none;
   border: none;
   padding: 0;
@@ -379,21 +377,20 @@ h1 {
   cursor: pointer;
 }
 
-/* New styles for output text area wrapper with icons */
+ 
 .outputAreaWrapper {
   position: relative;
-  padding-right: 40px;  /* Add some space for the icons */
+  padding-right: 40px;   
 }
 
 .outputAreaWrapper textarea {
   width: 100%;
-  /* ...existing textarea styles apply... */
 }
 
 .outputAreaIcons {
   position: absolute;
   top: 50%;
-  right: -8px; /* adjust as needed */
+  right: -8px;  
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -414,16 +411,14 @@ h1 {
   font-family: "Nunito Sans", serif;
 }
 
-/* Remove the old cool-button style then add the new style exactly as provided: */
-
-/* New container for action buttons */
+ 
 .actionButtonContainer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-/* New Action Button Style */
+ 
 .action-button {
   display: inline-block;
   padding: 10px 20px;
@@ -470,7 +465,7 @@ a::before {
   background: rgba(255,255,255,0.05);
 }
 
-/* Remove default animations */
+ 
 a span:nth-child(1),
 a span:nth-child(2),
 a span:nth-child(3),
@@ -478,7 +473,7 @@ a span:nth-child(4) {
   animation: none;
 }
 
-/* Add animations on active state only */
+ 
 a:active span:nth-child(1) {
   animation: animate1 2s linear infinite;
   animation-delay: 1s;
@@ -496,7 +491,7 @@ a:active span:nth-child(4) {
   animation-delay: 2s;
 }
 
-/* Disable animations on enc/dec button spans when not active */
+ 
 a span:nth-child(1):not(:active),
 a span:nth-child(2):not(:active),
 a span:nth-child(3):not(:active),
@@ -504,7 +499,7 @@ a span:nth-child(4):not(:active) {
   animation: none !important;
 }
 
-/* Enable animations on active state only */
+ 
 a:active span:nth-child(1) {
   animation: animate1 2s linear infinite !important;
   animation-delay: 1s;
@@ -582,14 +577,14 @@ a span:nth-child(4) {
   100% { transform: translateY(-100%); }
 }
 
-/* New container for the action buttons */
+ 
 .actionButtonsContainer {
   position: relative;
-  height: 60px; /* reduced height */
-  margin-top: 5px; /* reduced top margin */
+  height: 60px;  
+  margin-top: 5px;  
 }
 
-/* Updated overrides to further reduce the gap between buttons */
+ 
 .left-button {
   left: 25% !important;
   top: 50% !important;
@@ -602,7 +597,6 @@ a span:nth-child(4) {
   transform: translate(0, -50%) !important;
 }
 
-/* Remove default animations from non-active state (if not already done) */
 a span:nth-child(1),
 a span:nth-child(2),
 a span:nth-child(3),
@@ -610,7 +604,7 @@ a span:nth-child(4) {
   animation: none !important;
 }
 
-/* New rules: when the button has ".animate-click" class, enable animations */
+
 a.animate-click span:nth-child(1) {
   animation: animate1 2s linear infinite !important;
   animation-delay: 1s;
@@ -628,7 +622,6 @@ a.animate-click span:nth-child(4) {
   animation-delay: 2s;
 }
 
-/* For the right (Decrypt) button, reverse the animation direction on click */
 a.right-button.animate-click span:nth-child(1),
 a.right-button.animate-click span:nth-child(2),
 a.right-button.animate-click span:nth-child(3),

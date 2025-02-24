@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from 'react';
 import './App.css';
+import './mobile.css';  
 import { encryptText, decryptText } from './crypto';
 // Added import for performance metrics
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -11,7 +12,7 @@ function App() {
     const [output, setOutput] = useState('');
     const [showOutput, setShowOutput] = useState(false);
 
-    // Existing paste for text
+    
     const handlePaste = async () => {
         try {
             const clipboardText = await navigator.clipboard.readText();
@@ -21,24 +22,23 @@ function App() {
         }
     };
 
-    // New paste for key field - trim pasted text to 18 characters
+   
     const handlePasteKey = async () => {
         try {
             const clipboardText = await navigator.clipboard.readText();
-            setKey(clipboardText.slice(0, 18)); // truncate to 18 characters
+            setKey(clipboardText.slice(0, 18));
         } catch (error) {
             console.error("Paste key failed", error);
         }
     };
 
-    // Separate clear functions
+    
     const handleClearText = () => setText('');
     const handleClearKey = () => setKey('');
-    // Update clear output handler to smoothly hide output
     const handleClearOutput = () => {
-        setOutput('');  // clear inner box first
+        setOutput('');  
         setTimeout(() => {
-            setShowOutput(false);  // then hide the outer container smoothly
+            setShowOutput(false);  
             document.querySelectorAll('.actionButtonsContainer a')
                 .forEach(el => el.classList.remove("animate-click"));
         }, 100);
@@ -53,7 +53,6 @@ function App() {
     };
 
     const handleEncrypt = async (e) => {
-        // Remove animation from all buttons in the container
         document.querySelectorAll('.actionButtonsContainer a').forEach(el => el.classList.remove("animate-click"));
         
         if (e.currentTarget) {
@@ -75,7 +74,6 @@ function App() {
     };
 
     const handleDecrypt = async (e) => {
-        // Remove animation from all buttons in the container
         document.querySelectorAll('.actionButtonsContainer a').forEach(el => el.classList.remove("animate-click"));
         
         if (e.currentTarget) {
@@ -119,7 +117,6 @@ function App() {
         }
     };
 
-    // When setting output, also show the container
     const updateOutput = (result) => {
         setOutput(result);
         if (result) setShowOutput(true);
