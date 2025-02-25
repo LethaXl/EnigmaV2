@@ -165,6 +165,7 @@
 @media screen and (max-width: 415px) {
   h1 {
     font-size: 28px;
+    transform: translateX(6%);
   }
 
   .formContainer,
