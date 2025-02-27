@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './mobile.css';  
 import { encryptText, decryptText } from './crypto';
@@ -12,6 +12,29 @@ function App() {
     const [output, setOutput] = useState('');
     const [showOutput, setShowOutput] = useState(false);
 
+    // New scramble animation effect for the title
+    useEffect(() => {
+        const titleElement = document.getElementById('scramble-title');
+        if (!titleElement) return;
+        const originalText = "EnigmaV2"; // Set the original text explicitly
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const scrambleDuration = 3000;
+        const scrambleInterval = 150;
+        let step = 0;
+        function scrambleText() {
+            if (step < scrambleDuration / scrambleInterval) {
+                const scrambledText = Array.from(originalText).map((char, index) =>
+                    index < step ? char : letters.charAt(Math.floor(Math.random() * letters.length))
+                ).join('');
+                titleElement.textContent = scrambledText;
+                step++;
+                setTimeout(scrambleText, scrambleInterval);
+            } else {
+                titleElement.textContent = originalText;
+            }
+        }
+        scrambleText();
+    }, []);
     
     const handlePaste = async () => {
         try {
@@ -124,7 +147,7 @@ function App() {
 
     return (
         <div className="container">
-            <h1>EnigmaV2</h1>
+            <h1 id="scramble-title">EnigmaV2</h1>
             <div className="formContainer">
                 {/* Text Field Section */}
                 <div className="textAreaWrapper">
