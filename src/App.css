@@ -634,3 +634,44 @@ a.right-button.animate-click span:nth-child(4) {
   font-family: "DM Serif Text", serif;
 }
 
+/* Alert Styles - Fixed position at top center */
+.copy-alert {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #e0e0e0;
+  border: 1px solid #4a90e2;
+  border-radius: 8px;
+  background-color: #252537;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  max-width: 300px;
+}
+
+.copy-alert.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.copy-alert svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  fill: #4a90e2;
+}
+
+.copy-alert .font-medium {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #4a90e2;
+}
+

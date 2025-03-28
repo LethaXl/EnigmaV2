@@ -160,6 +160,13 @@
   .outputContainer textarea::-webkit-scrollbar {
     width: 6px;
   }
+
+  .copy-alert {
+    width: 30%;
+    max-width: none;
+    padding: 8px;
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 415px) {
